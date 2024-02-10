@@ -23,7 +23,7 @@ public class BlogController {
     public ResponseEntity<Article> addArticle (@RequestBody AddArticleRequest request) {
         Article savedArticle = blogService.save(request);
 
-        return ResponseEntity.status(HttpStatus.CREATED)
+        return ResponseEntity.status(HttpStatus.CREATED) // todo : header 관리
                 .body(savedArticle);
     }
 
