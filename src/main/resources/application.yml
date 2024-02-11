@@ -15,3 +15,7 @@ spring:
   h2:
     console:
       enabled: true
+
+jwt:
+  issuer: kabyho3513@gmail.com
+  secret-key: kang-spring
