@@ -16,6 +16,17 @@ spring:
     console:
       enabled: true
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1040627662105-7n8evqoe3d2go3dn21jj80grjhd8q1co.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+
 jwt:
   issuer: kabyho3513@gmail.com
   secret-key: kang-spring

@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,14 +19,6 @@ import java.util.Optional;
 @RestController
 public class BlogController {
     private final BlogService blogService;
-
-    @PostMapping("/api/articles")
-    public ResponseEntity<Article> addArticle (@RequestBody AddArticleRequest request) {
-        Article savedArticle = blogService.save(request);
-
-        return ResponseEntity.status(HttpStatus.CREATED) // todo : header 관리
-                .body(savedArticle);
-    }
 
     @GetMapping("/api/articles")
     public ResponseEntity<List<ArticleResponse>> findAllArticles () {
@@ -60,5 +53,13 @@ public class BlogController {
 
         return ResponseEntity.ok()
                 .body(article);
+    }
+
+    @PostMapping("/api/articles")
+    public ResponseEntity<Article> addArticle(@RequestBody AddArticleRequest request, Principal principal) {
+        Article savedArticle = blogService.save(request, principal.getName());
+
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(savedArticle);
     }
 }

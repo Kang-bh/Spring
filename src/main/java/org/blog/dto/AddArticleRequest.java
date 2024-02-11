@@ -12,10 +12,11 @@ public class AddArticleRequest {
     private String title;
     private String content;
 
-    public Article toEntity() { // DTO to Entity
+    public Article toEntity(String author) { // DTO to Entity
         return Article.builder()
                 .title(title)
                 .content(content)
+                .author(author)
                 .build();
     }
 }
