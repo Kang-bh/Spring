@@ -2,7 +2,6 @@ package org.blog.domain;
 
 
 import jakarta.persistence.*;
-import jakarta.websocket.OnError;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
