@@ -33,3 +33,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+// prohibit create plain jar file
+jar {
+    enabled = false
+}
