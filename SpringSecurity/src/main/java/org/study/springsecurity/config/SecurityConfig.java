@@ -30,7 +30,7 @@ public class SecurityConfig {
 
         // 해당 경로들에 대한 특정 권한 설정
         http.authorizeHttpRequests((auth) -> auth // 해당 방식 통해 권한 확인, 작성은 lambda식으로 작성
-                        .requestMatchers("/", "/login").permitAll() // root 경로 및 login 경로에 대한 특정 권한 부여 , hasRole, permitAll, authenticated(로그인만 진행하면)
+                        .requestMatchers("/", "/login", "/join", "joinProc").permitAll() // root 경로 및 login 경로에 대한 특정 권한 부여 , hasRole, permitAll, authenticated(로그인만 진행하면)
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER") // 여러 유저 아이디 직접 설정하기 어렵기에 와일드 카드 이용
                         .anyRequest().authenticated() // 처리하지 못할 어떤 경로 모든지
