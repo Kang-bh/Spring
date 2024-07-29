@@ -1,4 +1,4 @@
-package org.synergy.springsecurity.controller;
+package org.study.springsecurity.controller;
 
 
 import org.springframework.stereotype.Controller;
