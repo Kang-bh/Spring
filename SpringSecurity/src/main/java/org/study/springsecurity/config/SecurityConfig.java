@@ -4,11 +4,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration // Spring Boot에게 Configuration으로 등록 필요
 @EnableWebSecurity // Security 설정을 위해. 이를 통해 해당 클래스가 Spring Security에서도 관리
 public class SecurityConfig {
+
+    // Bcycrpt 암호화
+    @Bean // 어디서든 사용가능하도록 (회원가입 etc)
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+
+        return new BCryptPasswordEncoder(); // 암호화 진행할 Encoder 생성자 함수
+    }
+
 
     // 특정 메소드 통해 Bean 주입
 
@@ -37,9 +47,10 @@ public class SecurityConfig {
                 .formLogin((auth) -> auth.loginPage("/login")
                         .loginProcessingUrl("/loginProc")
                         .permitAll()
-                ); // Spring Security가 자동으로 해당 경로를 통해 받아서 로그인 처리 지냏ㅇ
+                ); // Spring Security가 자동으로 해당 경로를 통해 받아서 로그인 처리 진행
 
         return http.build();
     }
+
 
 }
