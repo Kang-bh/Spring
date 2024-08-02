@@ -43,11 +43,21 @@ public class SecurityConfig {
                 .csrf((auth) -> auth.disable()); // 추후 enable
 
         http
+                .sessionManagement((auth) -> auth
+                        .maximumSessions(1)
+                        .maxSessionsPreventsLogin(true));
+
+        http
                 // custom한 loginPage경로 설정
                 .formLogin((auth) -> auth.loginPage("/login")
                         .loginProcessingUrl("/loginProc")
                         .permitAll()
                 ); // Spring Security가 자동으로 해당 경로를 통해 받아서 로그인 처리 진행
+
+        // 세션 고종 보호
+        http
+                .sessionManagement((auth) -> auth
+                        .sessionFixation().changeSessionId()); // 세션은 동일하지만 세션 쿠키 id값을 변경 시켜 해커와 유저가 가지는 id을 다르게 설정
 
         return http.build();
     }
