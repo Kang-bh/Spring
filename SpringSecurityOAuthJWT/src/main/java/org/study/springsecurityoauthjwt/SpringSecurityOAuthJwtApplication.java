@@ -1,0 +1,13 @@
+package org.study.springsecurityoauthjwt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringSecurityOAuthJwtApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityOAuthJwtApplication.class, args);
+    }
+
+}
