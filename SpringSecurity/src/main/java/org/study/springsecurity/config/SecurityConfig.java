@@ -39,8 +39,8 @@ public class SecurityConfig {
         );
 
         // csrf 사이트 위변조 방지 동작되면 post 요청 시에 csrf 토큰도 보내줘야 로그인이 진행된다. but 개발 환경에서는
-        http
-                .csrf((auth) -> auth.disable()); // 추후 enable
+        // http
+        // .csrf((auth) -> auth.disable()); // 추후 enable
 
         http
                 .sessionManagement((auth) -> auth

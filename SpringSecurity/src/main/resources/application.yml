@@ -27,3 +27,7 @@ spring:
     servlet:
       session:
         timeout: 1800
+
+  mustache:
+    servlet:
+      expose-request-attributes: true
