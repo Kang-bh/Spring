@@ -2,6 +2,7 @@ package org.study.springsecurity.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -51,13 +52,15 @@ public class SecurityConfig {
                         .maximumSessions(1)
                         .maxSessionsPreventsLogin(true));
 
-        http
-                // custom한 loginPage경로 설정
-                .formLogin((auth) -> auth.loginPage("/login")
-                        .loginProcessingUrl("/loginProc")
-                        .permitAll()
-                ); // Spring Security가 자동으로 해당 경로를 통해 받아서 로그인 처리 진행
+//        http
+//                // custom한 loginPage경로 설정
+//                .formLogin((auth) -> auth.loginPage("/login")
+//                        .loginProcessingUrl("/loginProc")
+//                        .permitAll()
+//                ); // Spring Security가 자동으로 해당 경로를 통해 받아서 로그인 처리 진행
 
+        http
+                .httpBasic(Customizer.withDefaults());
         // 세션 고종 보호
         http
                 .sessionManagement((auth) -> auth
