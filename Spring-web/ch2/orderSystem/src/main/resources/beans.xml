@@ -10,4 +10,5 @@
     </bean>
     <bean id ="singletonBean" class="org.study.bean.SingletonBean" init-method="init" destroy-method="destroy"/>
     <bean id ="prototypeBean" class="org.study.bean.PrototypeBean" scope="prototype" init-method="init" destroy-method="destroy"/>
+    <bean id ="factoryBean" class="org.study.bean.FactoryBean"  factory-method="getInstance" destroy-method="destroy"/>
 </beans>

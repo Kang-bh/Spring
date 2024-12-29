@@ -3,6 +3,7 @@ package org.study.context;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.study.bean.FactoryBean;
 import org.study.bean.PrototypeBean;
 import org.study.bean.SingletonBean;
 import org.study.ordersystem.Customer;
@@ -21,6 +22,9 @@ public class XML_Main {
         PrototypeBean prototypeBean1 = context.getBean("prototypeBean", PrototypeBean.class);
         SingletonBean singletonBean2 = context.getBean("singletonBean", SingletonBean.class);
         PrototypeBean prototypeBean2 = context.getBean("prototypeBean", PrototypeBean.class);
+        FactoryBean factoryBean1 = context.getBean("factoryBean", FactoryBean.class);
+        FactoryBean factoryBean2 = context.getBean("factoryBean", FactoryBean.class);
+
 
         System.out.println("======= Customer =======");
         CustomerService customerService = context.getBean("customerService", CustomerService.class);

@@ -11,4 +11,7 @@ beans {
         bean.initMethod = 'init'
         bean.destroyMethod = 'destroy'
     }
+    factoryBean(org.study.bean.FactoryBean){ bean ->
+        bean.destroyMethod = 'destroy'
+    }
 }
