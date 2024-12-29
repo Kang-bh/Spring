@@ -4,9 +4,7 @@ import groovy.util.Factory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-import org.study.bean.PrototypeBean;
-import org.study.bean.SingletonBean;
-import org.study.bean.FactoryBean;
+import org.study.bean.*;
 import org.study.ordersystem.CustomerRepository;
 import org.study.ordersystem.CustomerRepositoryImpl;
 import org.study.ordersystem.CustomerService;
@@ -40,5 +38,23 @@ public class AppConfig {
     @Bean(destroyMethod = "destroy")
     public FactoryBean factoryBean() {
         return FactoryBean.getInstance();
+    }
+
+    @Bean
+    @Scope(value = "prototype")
+    public InjectedBean injectedBean() {
+        return new InjectedBean();
+    }
+
+    @Bean
+    public DependentBean1 dependentBean1() {
+        return new DependentBean1(injectedBean());
+    }
+
+    @Bean
+    public DependentBean2 dependentBean2() {
+        DependentBean2 dependentBean2 = new DependentBean2();
+        dependentBean2.setInjectedBean(injectedBean());
+        return dependentBean2;
     }
 }

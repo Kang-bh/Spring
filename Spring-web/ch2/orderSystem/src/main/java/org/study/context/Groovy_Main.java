@@ -3,9 +3,7 @@ package org.study.context;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.GenericGroovyApplicationContext;
-import org.study.bean.FactoryBean;
-import org.study.bean.PrototypeBean;
-import org.study.bean.SingletonBean;
+import org.study.bean.*;
 import org.study.ordersystem.Customer;
 import org.study.ordersystem.CustomerService;
 
@@ -24,6 +22,10 @@ public class Groovy_Main {
         PrototypeBean prototypeBean2 = context.getBean("prototypeBean", PrototypeBean.class);
         FactoryBean factoryBean1 = context.getBean("factoryBean", FactoryBean.class);
         FactoryBean factoryBean2 = context.getBean("factoryBean", FactoryBean.class);
+
+        System.out.println("======= DI =======");
+        DependentBean1 dependentBean1 = context.getBean("dependentBean1", DependentBean1.class);
+        DependentBean2 dependentBean2 = context.getBean("dependentBean2", DependentBean2.class);
 
         System.out.println("======= Customer =======");
         CustomerService customerService = context.getBean("customerService", CustomerService.class);

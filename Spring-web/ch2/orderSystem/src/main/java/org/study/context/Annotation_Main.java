@@ -3,9 +3,7 @@ package org.study.context;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.study.bean.FactoryBean;
-import org.study.bean.PrototypeBean;
-import org.study.bean.SingletonBean;
+import org.study.bean.*;
 import org.study.ordersystem.Customer;
 import org.study.ordersystem.CustomerService;
 

@@ -44,6 +44,7 @@
     "Application.Annotation_Main.executor": "Run",
     "Application.Groovy_Main.executor": "Run",
     "Application.XML_Main.executor": "Run",
+    "Groovy.beans.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -78,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735392719295</updated>
-      <workItem from="1735392720337" duration="8600000" />
+      <workItem from="1735392720337" duration="11536000" />
     </task>
     <servers />
   </component>

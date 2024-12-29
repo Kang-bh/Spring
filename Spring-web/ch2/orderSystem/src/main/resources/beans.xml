@@ -11,4 +11,11 @@
     <bean id ="singletonBean" class="org.study.bean.SingletonBean" init-method="init" destroy-method="destroy"/>
     <bean id ="prototypeBean" class="org.study.bean.PrototypeBean" scope="prototype" init-method="init" destroy-method="destroy"/>
     <bean id ="factoryBean" class="org.study.bean.FactoryBean"  factory-method="getInstance" destroy-method="destroy"/>
+    <bean id ="injectedBean" class="org.study.bean.InjectedBean" scope="prototype"/>
+    <bean id ="dependentBean1" class="org.study.bean.DependentBean1">
+        <constructor-arg ref = "injectedBean"/>
+    </bean>
+    <bean id ="dependentBean2" class="org.study.bean.DependentBean2">
+        <property name = "injectedBean" ref = "injectedBean"/>
+    </bean>
 </beans>
