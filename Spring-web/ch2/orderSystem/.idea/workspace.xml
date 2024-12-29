@@ -8,8 +8,11 @@
       <change beforePath="$PROJECT_DIR$/../../ch1/orderSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ch1/orderSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/study/context/Annotation_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/study/context/Annotation_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/study/context/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/study/context/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/study/context/Groovy_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/study/context/Groovy_Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/study/context/XML_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/study/context/XML_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/beans.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../SpringSecurityOAuthJWT/src/main/java/org/study/springsecurityoauthjwt/jwt/JWTFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../SpringSecurityOAuthJWT/src/main/java/org/study/springsecurityoauthjwt/jwt/JWTUtil.java" beforeDir="false" />
     </list>
@@ -75,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735392719295</updated>
-      <workItem from="1735392720337" duration="2243000" />
+      <workItem from="1735392720337" duration="7946000" />
     </task>
     <servers />
   </component>

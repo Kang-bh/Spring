@@ -8,4 +8,6 @@
     <bean id = "customerService" class = "org.study.ordersystem.CustomerServiceImpl">
         <property name="customerRepository" ref="customerRepository"></property>
     </bean>
+    <bean id ="singletonBean" class="org.study.bean.SingletonBean" init-method="init" destroy-method="destroy"/>
+    <bean id ="prototypeBean" class="org.study.bean.PrototypeBean" scope="prototype" init-method="init" destroy-method="destroy"/>
 </beans>
